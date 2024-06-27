@@ -1,0 +1,170 @@
+@font-face {
+     font-family: "Karla-Bold";
+     src: url(assets/fonts/static/Karla-Bold.ttf)format("truetype");
+     font-weight: 400;
+     font-style: normal
+ }
+
+ @font-face {
+     font-family: "Karla-Regular";
+     src: url(assets/fonts/Karla-VariableFont_wght.ttf)format("truetype");
+     font-weight: 400;
+     font-style: normal;
+     font-stretch: condensed
+ }
+
+ * {
+     box-sizing: border-box
+ }
+
+ body,
+ html {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin: 0;
+     padding: 0;
+     background-color: #e0f1e7;
+     height: 100vh;
+     
+ }
+
+ form {
+     border-radius: 5px;
+     width: 100%;
+     grid-template-columns: 1fr 1fr;
+     padding: 20px;
+     gap: 20px;
+     background-color: #fff
+ }
+
+ .control-form-big,
+ .control-form-double,
+ button,
+ h1 {
+     grid-column: span 2
+ }
+
+ h1 {
+     font-family: "Karla-Bold";
+     margin: 10px 0;
+     font-size: 1.6rem
+ }
+
+ form button,
+ form input,
+ form label,
+ form textarea {
+     font-family: "Karla-Regular";
+     font-size: .9rem
+ }
+
+ form div.radio {
+     border: 1px solid gray;
+     border-radius: 5px;
+     height: 35px;
+     padding: 0 10px
+ }
+
+ label.warning {
+     color: red;
+     margin-top: 5px;
+     height: 17px
+ }
+
+ form div input[type=text],
+ form div textarea {
+     border: 1px solid gray;
+     border-radius: 5px;
+     margin-top: 5px;
+     height: 40px
+ }
+
+ form div textarea {
+     height: 70px
+ }
+
+ form input[type=text],
+ form textarea {
+     padding: 5px
+ }
+
+ form div input[type=checkbox],
+ form div input[type=radio] {
+     margin: 0 10px 0 0
+ }
+
+ .control-form-big,
+ .control-form-double,
+ .control-form-small,
+ form {
+     display: grid
+ }
+
+ button.btn-form-submit {
+     height: 36px;
+     border-radius: 5px;
+     border: 0;
+     background-color: #0c7d69;
+     color: #fff
+ }
+
+ .control-form-small {
+     min-width: 300px
+ }
+
+ .control-form-double {
+     grid-template-columns: 1fr 1fr;
+     gap: 10px
+ }
+
+ .control-form-double>label {
+     grid-column: span 2
+ }
+
+ div.checked,
+ form div.radio {
+     display: flex;
+     align-items: center
+ }
+
+ .control-form-large {
+     display: flex;
+     flex-direction: column;
+     grid-column: span 2
+ }
+
+ .border-red {
+     border-color: red !important
+ }
+
+ @media (max-width:650px) {
+
+    body,
+    html {
+        
+        padding: 10px 0;
+    }
+
+    .control-form-small {
+        min-width: 320px
+    }
+
+     .control-form-big,
+     .control-form-double,
+     .control-form-double>label,
+     .control-form-large,
+     button,
+     h1 {
+         grid-column: span 1
+     }
+
+     .control-form-double,
+     form {
+         grid-template-columns: 1fr
+     }
+
+     form {
+        max-width: 360px;
+     }
+ }
