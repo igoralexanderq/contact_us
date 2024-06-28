@@ -62,7 +62,7 @@
  form div.radio {
      border: 1px solid gray;
      border-radius: 5px;
-     height: 35px;
+     height: 40px;
      padding: 0 10px
  }
 
@@ -86,7 +86,7 @@
 
  form input[type=text],
  form textarea {
-     padding: 5px
+     padding: 10px 15px
  }
 
  form div input[type=checkbox],
@@ -136,6 +136,11 @@
 
  .border-red {
      border-color: red !important
+ }
+
+ .input:focus {
+     border-color: #0c7d69;
+     outline: none;
  }
 
  @media (max-width:650px) {

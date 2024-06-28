@@ -20,18 +20,22 @@ const Checked = forwardRef((props, ref) => {
     }
 
     const getValue = () => {
-        return document.getElementById('chkacceptterms').checked;
+        return document.getElementById('chkacceptterms').checked = false
+    }
+
+    const reset = () => {
+        document.getElementById('chkacceptterms').checked = false;
     }
 
     useImperativeHandle(ref, () => ({
-        validate, getValue
+        validate, getValue, reset
     }));
 
     return (
         <div className="control-form-large">
             <div className="checked">
                 <input type="checkbox" id={props.idx} value={props.idx}/>
-                <label htmlFor="chkacceptterms">{props.text}</label>
+                <label htmlFor={props.idx}>{props.text}</label>
             </div>
             <label htmlFor="" className="warning">{validationMessage}</label>
         </div>

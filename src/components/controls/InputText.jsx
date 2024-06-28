@@ -21,14 +21,18 @@ const InputText = forwardRef((props, ref) => {
         return value;
     }
 
+    const clear = () => {
+        setValue('');
+    }   
+
     useImperativeHandle(ref, () => ({
-        validate, getValue        
+        validate, getValue, clear    
     }));    
 
     return (
         <div className="control-form-small">
             <label htmlFor="input">{props.label}</label>
-            <input type="text" name={props.name} value={value} onChange={(e) => setValue(e.target.value)} className={borderClass}/>
+            <input type="text" name={props.name} value={value} onChange={(e) => setValue(e.target.value)} className={`input ${borderClass}`}/>
             <label htmlFor="" className="warning">{validationMessage}</label>
         </div>
     )

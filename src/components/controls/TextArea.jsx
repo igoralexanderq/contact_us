@@ -21,14 +21,18 @@ const TextArea = forwardRef((props, ref) => {
         return value;
     }
 
+    const clear = () => {
+        setValue('');
+    }
+
     useImperativeHandle(ref, () => ({
-        validate, getValue
+        validate, getValue, clear
     }));
 
     return (
         <div className="control-form-big">
-            <label htmlFor="message">{props.label}</label>
-            <textarea name={props.name} id="message" cols={5} onChange={(e) => setValue(e.target.value)} className={borderClass} value={value}></textarea>
+            <label htmlFor={props.idx}>{props.label}</label>
+            <textarea name={props.name} id={props.idx} cols={5} onChange={(e) => setValue(e.target.value)} className={`input ${borderClass}`} value={value}></textarea>
             <label htmlFor="" className="warning">{validationMessage}</label>
         </div>
     )
