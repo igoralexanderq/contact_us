@@ -49,7 +49,7 @@ Before you begin, ensure you have installed the latest version of:
 
 1. Clone the repository:
 
-   git clone https://your-repository-url-here
+   git clone https://github.com/igoralexanderq/contact_us.git
 
 2. Navigate to the project directory
 
